@@ -160,7 +160,8 @@ img {
 }
 
 .contact-header .link {
-  display: block;
+  display: flex;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -168,6 +169,8 @@ img {
 /* -------HERO------- */
 
 .hero {
+  width: 1600px;
+  margin: 0 auto;
   background-image: url(../images/Overlay.png), url(../images/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -229,6 +232,7 @@ img {
 
 .feature-list {
   display: flex;
+  justify-content: center;
 }
 
 .feature-list .item + .item {
@@ -240,18 +244,16 @@ img {
 }
 
 .feature-fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 270px;
   height: 120px;
-  border: 1px solid var(--background-light);
   border-radius: 4px;
   background-color: var(--background-light);
   margin-bottom: 30px;
 }
-
-.feature-icon {
-  margin: 25px 100px;
-}
-
+ 
 /* ----What we do------ */
 .we-do {
   padding-bottom: 94px;
@@ -306,6 +308,7 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--additional-text);
+  margin-bottom: 16px;
 }
 
 .team-list {
@@ -335,28 +338,24 @@ img {
   gap: 10px;
   margin-top: 16px;
 }
-.team-soc-item {
+
+.team-soc-link:hover,
+.team-soc-link:focus {
+  fill: var(--white);
+  background-color: var(--accent-color);
+}
+
+.team-soc-link {
+  display: flex;
+  fill: #afb1b8;
   width: 44px;
   height: 44px;
   background-color: var(--white);
   border-radius: 22px;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.team-soc-item:hover,
-.team-soc-item:focus {
-  background-color: var(--accent-color);
-}
-
-.team-soc-item:hover .team-soc-icon {
-  fill: var(--white);
-}
-
-.team-soc-icon {
-  fill: #afb1b8;
-}
 
 /* -----Clients---- */
 
@@ -373,15 +372,6 @@ img {
   margin-left: 30px;
 }
 
-.clients-list > .item {
-  width: 170px;
-  height: 92px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 .clients-title {
   font-weight: 700;
   font-size: 36px;
@@ -391,13 +381,25 @@ img {
   margin-bottom: 50px;
 }
 
-.clients-icon {
-  fill: #afb1b8;
+.clients-icon-link {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #afb1b8;
 }
-.clients-list .item:hover,
-.clients-icon:hover {
-  fill: var(--accent-color);
+
+.clients-icon-link:hover,
+.clients-icon-link:focus {
+  color: var(--accent-color);
   border-color: var(--accent-color);
+}
+
+.clients-icon {
+  fill:currentColor;
 }
 /* --------Portfolio--------- */
 
@@ -470,6 +472,7 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--main-text-color);
 }
 
 .portfolio-type {
@@ -503,8 +506,6 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--white);
-
-  padding-bottom: 24px;
 }
 
 .logo-web-footer {
@@ -515,14 +516,11 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
-
-  padding-bottom: 24px;
 }
 
 .footer-wrap {
   display: flex;
   align-items: baseline;
-  
 }
 .footer-soc {
   margin-left: 70px;
@@ -568,7 +566,7 @@ img {
   gap: 10px;
 }
 
-.footer-soc-item {
+.footer-soc-link {
   width: 44px;
   height: 44px;
   background-color: rgba(255, 255, 255, 0.1);
@@ -578,8 +576,8 @@ img {
   justify-content: center;
 }
 
-.footer-soc-item:hover,
-.footer-soc-item:focus {
+.footer-soc-link:hover,
+.footer-soc-link:focus {
   background-color: var(--accent-color);
 }
 
